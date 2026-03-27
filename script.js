@@ -113,4 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
       renderCalendar(currentYear, currentMonth);
     });
   }
+
+  // --- Event Accordion Toggle ---
+  const eventToggles = document.querySelectorAll('.event-toggle');
+  eventToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const item = toggle.closest('.event-item');
+      item.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', item.classList.contains('active'));
+    });
+  });
 });

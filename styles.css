@@ -584,8 +584,98 @@ img {
   color: #d1d1e0;
 }
 
+/* --- Events List (Accordion) --- */
 .events-list {
-  /* event cards would go here */
+  display: grid;
+  gap: 16px;
+}
+
+.event-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.event-item:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.event-toggle {
+  width: 100%;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-family);
+  transition: background var(--transition);
+}
+
+.event-toggle:hover {
+  background: var(--color-bg);
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.event-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.event-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.toggle-icon {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.event-item.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.event-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.event-item.active .event-details {
+  max-height: 600px;
+}
+
+.details-content {
+  padding: 0 32px 28px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 24px;
+}
+
+.details-content p {
+  color: var(--color-text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.details-content p:last-child {
+  margin-bottom: 0;
 }
 
 /* --- Footer --- */
