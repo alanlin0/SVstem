@@ -114,13 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Event Accordion Toggle ---
-  const eventToggles = document.querySelectorAll('.event-toggle');
-  eventToggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const item = toggle.closest('.event-item');
-      item.classList.toggle('active');
-      toggle.setAttribute('aria-expanded', item.classList.contains('active'));
+  // --- Mobile Dropdown Toggle ---
+  const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+  dropdownTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      // On mobile, toggle the dropdown instead of navigating
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        trigger.closest('.nav-dropdown').classList.toggle('open');
+      }
     });
   });
 });
