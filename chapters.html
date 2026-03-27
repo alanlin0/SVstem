@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SVstem chapters — each participating high school hosts a student-run chapter dedicated to STEM outreach.">
+  <title>Chapters — SVstem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">SV<span class="logo-accent">stem</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="chapters.html" class="active">Chapters</a></li>
+        <li><a href="events.html">Events</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-header" id="chapters-header">
+      <div class="container">
+        <h1 class="page-title">Chapters</h1>
+        <p class="page-description">Each participating high school hosts its own SVstem chapter.</p>
+      </div>
+    </section>
+
+    <section class="section" id="chapters-list">
+      <div class="container">
+
+        <!-- Chapter Card -->
+        <div class="chapter-card" id="chapter-stratford">
+          <div class="chapter-header">
+            <h2 class="chapter-name">Stratford Preparatory Blackford</h2>
+            <span class="chapter-badge">Active</span>
+          </div>
+
+          <div class="chapter-sections">
+            <div class="chapter-section">
+              <h3>Chapter Board</h3>
+              <div class="chapter-board">
+                <div class="board-member">
+                  <div class="board-avatar">AL</div>
+                  <div>
+                    <p class="board-name">Alan Lin</p>
+                    <p class="board-role">Head of Board</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chapter-section">
+              <h3>Past Events</h3>
+              <div class="empty-state">
+                <div class="empty-icon">📋</div>
+                <p>No past events yet. Stay tuned!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="main-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="nav-logo">SV<span class="logo-accent">stem</span></span>
+        <p>STEM Education for Everyone.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">About</a>
+        <a href="team.html">Our Team</a>
+        <a href="chapters.html">Chapters</a>
+        <a href="events.html">Events</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 SVstem. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
