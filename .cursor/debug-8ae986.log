@@ -1,0 +1,27 @@
+{"sessionId":"8ae986","location":"script.js:chapter-init","message":"chapter toggles found","data":{"count":1},"timestamp":1774661628335,"hypothesisId":"H2"}
+{"sessionId":"8ae986","location":"script.js:chapter-bind","message":"binding toggle","data":{"panelId":"chapter-stratford-body","panelFound":true,"ariaExpanded":"false"},"timestamp":1774661628336,"hypothesisId":"H2"}
+{"sessionId":"8ae986","location":"script.js:chapter-pe","message":"nav pointer-events","data":{"pointerEvents":"auto"},"timestamp":1774661628337,"hypothesisId":"H5"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":false,"next":true,"ariaExpanded":"true","panelHiddenProp":false,"panelHasHiddenAttr":false,"computedDisplay":"grid"},"timestamp":1774661629469,"hypothesisId":"H1"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"empty-state opacity","data":{"opacity":"0","hasVisibleClass":false},"timestamp":1774661629470,"hypothesisId":"H4"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"button hit target","data":{"btnPointerEvents":"auto"},"timestamp":1774661629470,"hypothesisId":"H5"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":false,"next":true},"timestamp":1774661629470,"hypothesisId":"H3"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":true,"next":false,"ariaExpanded":"false","panelHiddenProp":true,"panelHasHiddenAttr":true,"computedDisplay":"grid"},"timestamp":1774661630189,"hypothesisId":"H1"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"empty-state opacity","data":{"opacity":"0","hasVisibleClass":false},"timestamp":1774661630190,"hypothesisId":"H4"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":true,"next":false},"timestamp":1774661630189,"hypothesisId":"H3"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"button hit target","data":{"btnPointerEvents":"auto"},"timestamp":1774661630190,"hypothesisId":"H5"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":false,"next":true,"ariaExpanded":"true","panelHiddenProp":false,"panelHasHiddenAttr":false,"computedDisplay":"grid"},"timestamp":1774661630981,"hypothesisId":"H1"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":false,"next":true},"timestamp":1774661630982,"hypothesisId":"H3"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"empty-state opacity","data":{"opacity":"0","hasVisibleClass":false},"timestamp":1774661630982,"hypothesisId":"H4"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"button hit target","data":{"btnPointerEvents":"auto"},"timestamp":1774661630982,"hypothesisId":"H5"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":true,"next":false,"ariaExpanded":"false","panelHiddenProp":true,"panelHasHiddenAttr":true,"computedDisplay":"grid"},"timestamp":1774661631613,"hypothesisId":"H1"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":true,"next":false},"timestamp":1774661631614,"hypothesisId":"H3"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"empty-state opacity","data":{"opacity":"0","hasVisibleClass":false},"timestamp":1774661631614,"hypothesisId":"H4"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"button hit target","data":{"btnPointerEvents":"auto"},"timestamp":1774661631614,"hypothesisId":"H5"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":false,"next":true,"ariaExpanded":"true","panelHiddenProp":false,"panelHasHiddenAttr":false,"computedDisplay":"grid"},"timestamp":1774661632885,"hypothesisId":"H1"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":false,"next":true},"timestamp":1774661632885,"hypothesisId":"H3"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"empty-state opacity","data":{"opacity":"0","hasVisibleClass":false},"timestamp":1774661632886,"hypothesisId":"H4"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"button hit target","data":{"btnPointerEvents":"auto"},"timestamp":1774661632886,"hypothesisId":"H5"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":true,"next":false,"ariaExpanded":"false","panelHiddenProp":true,"panelHasHiddenAttr":true,"computedDisplay":"grid"},"timestamp":1774661633317,"hypothesisId":"H1"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"after toggle","data":{"expandedBefore":true,"next":false},"timestamp":1774661633318,"hypothesisId":"H3"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"button hit target","data":{"btnPointerEvents":"auto"},"timestamp":1774661633318,"hypothesisId":"H5"}
+{"sessionId":"8ae986","location":"script.js:chapter-click","message":"empty-state opacity","data":{"opacity":"0","hasVisibleClass":false},"timestamp":1774661633318,"hypothesisId":"H4"}

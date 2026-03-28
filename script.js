@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Fade-in on scroll ---
-  const fadeEls = document.querySelectorAll('.about-card, .team-card, .chapter-card, .calendar-wrapper, .empty-state');
+  const fadeEls = document.querySelectorAll('.about-card, .team-card, .chapter-card, .calendar-wrapper');
   fadeEls.forEach(el => el.classList.add('fade-in'));
 
   const observer = new IntersectionObserver((entries) => {

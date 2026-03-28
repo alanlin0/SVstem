@@ -414,22 +414,39 @@ img {
   margin-bottom: 32px;
 }
 
-.chapter-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 28px 32px;
+.chapter-top {
+  padding: 14px 24px 16px;
   border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.chapter-top-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.chapter-name-heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  width: 100%;
+  line-height: 1.15;
 }
 
 .chapter-name-toggle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  flex: 1;
-  min-width: 0;
-  text-align: left;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
   background: none;
   border: none;
   padding: 0;
@@ -451,6 +468,12 @@ img {
 
 .chapter-name-toggle .chapter-name {
   margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.chapter-name-toggle .chapter-badge {
+  flex-shrink: 0;
 }
 
 .chapter-name-chevron {
@@ -464,15 +487,21 @@ img {
   transform: rotate(180deg);
 }
 
-.chapter-photo-wrap {
-  border-bottom: 1px solid var(--color-border);
-  background: var(--color-bg);
+.chapter-photo-frame {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  background: var(--color-surface);
 }
 
 .chapter-photo {
   width: 100%;
-  max-height: 320px;
+  max-height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 .chapter-name {
@@ -493,6 +522,10 @@ img {
   padding: 32px;
   display: grid;
   gap: 32px;
+}
+
+.chapter-sections[hidden] {
+  display: none !important;
 }
 
 .chapter-section h3 {
@@ -1085,11 +1118,12 @@ img {
     padding: 56px 0;
   }
 
-  .chapter-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 20px 24px;
+  .chapter-top {
+    padding: 12px 16px 14px;
+  }
+
+  .chapter-top-inner {
+    gap: 10px;
   }
 
   .chapter-name-toggle {
