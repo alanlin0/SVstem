@@ -18,16 +18,26 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">About</a></li>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="chapters.html">Chapters</a></li>
-        <li class="nav-dropdown">
-          <a href="events.html" class="dropdown-trigger active">Events <span class="dropdown-arrow">▾</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="event-filler.html">Filler Event — Jan 1, 2100</a></li>
-          </ul>
+        <li class="nav-links-group nav-links-group-start">
+          <div class="nav-links-row">
+            <a href="index.html">About</a>
+            <a href="team.html">Our Team</a>
+          </div>
         </li>
-        <li><a href="lead-a-chapter.html">Lead a Chapter</a></li>
+        <li class="nav-links-group nav-links-group-center">
+          <a href="chapters.html">Chapters</a>
+        </li>
+        <li class="nav-links-group nav-links-group-end">
+          <div class="nav-links-row">
+            <div class="nav-dropdown">
+              <a href="events.html" class="dropdown-trigger active">Events <span class="dropdown-arrow">▾</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="event-filler.html">Filler Event — Jan 1, 2100</a></li>
+              </ul>
+            </div>
+            <a href="lead-a-chapter.html">Lead a Chapter</a>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
@@ -40,8 +50,32 @@
       </div>
     </section>
 
+    <section class="section section-alt" id="events-calendar">
+      <div class="container">
+        <h2 class="section-title">Event calendar</h2>
+        <div class="calendar-wrapper">
+          <div class="calendar-nav">
+            <button type="button" class="calendar-btn" id="cal-prev" aria-label="Previous month">‹</button>
+            <span class="calendar-month" id="cal-month-label"></span>
+            <button type="button" class="calendar-btn" id="cal-next" aria-label="Next month">›</button>
+          </div>
+          <div class="calendar-grid">
+            <div class="calendar-day-header">Sun</div>
+            <div class="calendar-day-header">Mon</div>
+            <div class="calendar-day-header">Tue</div>
+            <div class="calendar-day-header">Wed</div>
+            <div class="calendar-day-header">Thu</div>
+            <div class="calendar-day-header">Fri</div>
+            <div class="calendar-day-header">Sat</div>
+            <div id="cal-days"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="events-listing">
       <div class="container">
+        <h2 class="section-title">Event list</h2>
         <div class="events-list">
           <a href="event-filler.html" class="event-card" id="event-filler-link">
             <div class="event-card-date">

@@ -95,23 +95,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderCalendar(currentYear, currentMonth);
 
-    calPrev.addEventListener('click', () => {
-      currentMonth--;
-      if (currentMonth < 0) {
-        currentMonth = 11;
-        currentYear--;
-      }
-      renderCalendar(currentYear, currentMonth);
-    });
+    if (calPrev && calNext) {
+      calPrev.addEventListener('click', () => {
+        currentMonth--;
+        if (currentMonth < 0) {
+          currentMonth = 11;
+          currentYear--;
+        }
+        renderCalendar(currentYear, currentMonth);
+      });
 
-    calNext.addEventListener('click', () => {
-      currentMonth++;
-      if (currentMonth > 11) {
-        currentMonth = 0;
-        currentYear++;
-      }
-      renderCalendar(currentYear, currentMonth);
-    });
+      calNext.addEventListener('click', () => {
+        currentMonth++;
+        if (currentMonth > 11) {
+          currentMonth = 0;
+          currentYear++;
+        }
+        renderCalendar(currentYear, currentMonth);
+      });
+    }
   }
 
   // --- Chapter card: expand/collapse details (photo stays visible) ---
