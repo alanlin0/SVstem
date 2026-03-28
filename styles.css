@@ -826,55 +826,114 @@ img {
   margin-bottom: 0;
 }
 
-/* --- Contact Page --- */
-.contact-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 48px 40px;
-  max-width: 560px;
-  margin: 0 auto;
-  text-align: center;
+/* --- Lead a Chapter Page --- */
+.lead-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  align-items: start;
 }
 
-.contact-icon {
-  font-size: 2.4rem;
+.lead-content h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
-.contact-card h2 {
-  font-size: 1.4rem;
+.lead-content h3 {
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-top: 32px;
+  margin-bottom: 14px;
 }
 
-.contact-card p {
+.lead-content p {
   color: var(--color-text-secondary);
   font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.lead-list {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  padding-left: 24px;
   margin-bottom: 8px;
 }
 
-.contact-email-label {
-  margin-top: 24px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-text) !important;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.lead-list li {
+  margin-bottom: 6px;
 }
 
-.contact-email {
-  display: inline-block;
-  margin-top: 8px;
-  font-size: 1.15rem;
-  font-weight: 600;
+.inline-link {
   color: var(--color-accent);
+  font-weight: 500;
   transition: opacity var(--transition);
 }
 
-.contact-email:hover {
+.inline-link:hover {
   opacity: 0.7;
+}
+
+.lead-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.lead-cta-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.lead-cta-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.lead-cta-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.lead-cta-card p {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.lead-stats-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  gap: 24px;
+}
+
+.lead-stat {
+  flex: 1;
+  text-align: center;
+}
+
+.lead-stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1.2;
+}
+
+.lead-stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
 }
 
 /* --- Footer --- */
@@ -1025,8 +1084,8 @@ img {
     display: none;
   }
 
-  .contact-card {
-    padding: 32px 24px;
+  .lead-grid {
+    grid-template-columns: 1fr;
   }
 }
 
