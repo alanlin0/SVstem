@@ -114,6 +114,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Chapter card: expand/collapse details (photo stays visible) ---
+  document.querySelectorAll('.chapter-name-toggle').forEach(btn => {
+    const panelId = btn.getAttribute('aria-controls');
+    const panel = panelId ? document.getElementById(panelId) : null;
+    if (!panel) return;
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const next = !expanded;
+      btn.setAttribute('aria-expanded', String(next));
+      panel.hidden = !next;
+    });
+  });
+
   // --- Mobile Dropdown Toggle ---
   const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
   dropdownTriggers.forEach(trigger => {

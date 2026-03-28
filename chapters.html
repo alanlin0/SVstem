@@ -44,10 +44,16 @@
       <div class="container">
         <div class="chapter-card" id="chapter-stratford">
           <div class="chapter-header">
-            <h2 class="chapter-name">Stratford Preparatory Blackford</h2>
+            <button type="button" class="chapter-name-toggle" id="chapter-stratford-toggle" aria-expanded="false" aria-controls="chapter-stratford-body">
+              <h2 class="chapter-name">Stratford Preparatory Blackford</h2>
+              <span class="chapter-name-chevron" aria-hidden="true">▾</span>
+            </button>
             <span class="chapter-badge">Active</span>
           </div>
-          <div class="chapter-sections">
+          <div class="chapter-photo-wrap">
+            <img class="chapter-photo" src="data/stratford-prep.jpg" alt="Stratford Preparatory Blackford campus" loading="lazy">
+          </div>
+          <div class="chapter-sections" id="chapter-stratford-body" hidden>
             <div class="chapter-section">
               <h3>Chapter Board</h3>
               <div class="chapter-board">
