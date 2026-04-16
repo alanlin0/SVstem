@@ -195,13 +195,49 @@ img {
 /* --- Hero --- */
 .hero {
   position: relative;
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  padding: calc(var(--nav-height) + 48px) 24px 80px;
+  overflow: hidden;
+  background-image: url('data/aboutbg.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-attachment: fixed;
+}
+
+.hero-inner {
   max-width: 1080px;
   margin: 0 auto;
-  overflow: hidden;
+  padding: calc(var(--nav-height) + 48px) 24px 80px;
+  display: flex;
+  align-items: center;
+  min-height: 85vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Horizontal gradient: readable on left, photo clearly visible on right */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(250, 250, 250, 0.82) 20%,
+    rgba(250, 250, 250, 0.42) 55%,
+    rgba(250, 250, 250, 0.12) 100%
+  );
+  z-index: 0;
+}
+
+/* Bottom fade for smooth scroll transition into next section */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -237,6 +273,7 @@ img {
   transform: translateY(-50%);
   width: 400px;
   height: 400px;
+  z-index: 1;
 }
 
 .hero-shape {
@@ -330,8 +367,75 @@ img {
 
 /* --- Page Header --- */
 .page-header {
-  padding: calc(var(--nav-height) + 56px) 0 40px;
+  padding: calc(var(--nav-height) + 56px) 0 56px;
   text-align: center;
+  position: relative;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 250, 250, 0.44);
+  z-index: 0;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Lead a Chapter — tall single background */
+#lead-header {
+  padding: calc(var(--nav-height) + 200px) 0 240px;
+  background-image: url('data/leadachapterbg.jpg');
+  background-size: cover;
+  background-position: center 70%;
+  background-attachment: fixed;
+}
+
+/* Chapters — two school photos side by side at full natural height */
+#chapters-header {
+  /* 33.3vw = natural image height when each photo is 50vw wide (aspect 650×433) */
+  min-height: calc(var(--nav-height) + 33.3vw);
+  padding: calc(var(--nav-height) + 20px) 0 28px;
+  overflow: hidden;
+}
+
+#chapters-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  width: 50%;
+  background-image:
+    linear-gradient(rgba(250, 250, 250, 0.44), rgba(250, 250, 250, 0.44)),
+    url('data/stratford-prep.jpg');
+  /* 100% auto = full pseudo-element width, proportional height → no crop */
+  background-size: 100% auto;
+  /* anchor to bottom so image sits flush below the nav bar */
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+#chapters-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 50%;
+  background-image:
+    linear-gradient(rgba(250, 250, 250, 0.44), rgba(250, 250, 250, 0.44)),
+    url('data/irvington.jpg');
+  background-size: 100% auto;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .page-title {
@@ -339,6 +443,11 @@ img {
   font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 12px;
+  text-shadow: 0 1px 12px rgba(250, 250, 250, 0.7);
+}
+
+.page-description {
+  text-shadow: 0 1px 8px rgba(250, 250, 250, 0.6);
 }
 
 .page-description {
@@ -436,6 +545,18 @@ img {
   font-weight: 700;
   font-size: 1.1rem;
   margin: 0 auto 20px;
+}
+
+.team-photo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .team-name {
@@ -1189,6 +1310,11 @@ img {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+  .hero,
+  #lead-header {
+    background-attachment: scroll;
+  }
+
   .nav-container {
     justify-content: space-between;
     padding-left: 20px;
@@ -1251,7 +1377,7 @@ img {
     width: 100%;
   }
 
-  .hero {
+  .hero-inner {
     min-height: auto;
     padding: calc(var(--nav-height) + 48px) 24px 64px;
   }
