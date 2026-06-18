@@ -13,7 +13,7 @@
 <body>
   <nav id="main-nav">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">SV<span class="logo-accent">stem</span></a>
+      <a href="index.html" class="nav-logo"><img src="data/logo.png" alt="Silicon Valley STEM"></a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -71,19 +71,19 @@
               <h3>Chapter Board</h3>
               <div class="chapter-board">
                 <div class="board-member">
-                  <div class="board-avatar">AL</div>
+                  <div class="board-avatar-photo" style="background-image: url('data/alanlin.png')" role="img" aria-label="Alan Lin"></div>
                   <div>
                     <p class="board-name">Alan Lin</p>
                     <p class="board-role">Head of Board</p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="chapter-section">
-              <h3>Past Events</h3>
-              <div class="empty-state">
-                <div class="empty-icon">📋</div>
-                <p>No past events yet. Stay tuned!</p>
+                <div class="board-member">
+                  <div class="board-avatar">EN</div>
+                  <div>
+                    <p class="board-name">Ethan Nguyen</p>
+                    <p class="board-role">Head of Board</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@
               <h3>Chapter Board</h3>
               <div class="chapter-board">
                 <div class="board-member">
-                  <div class="board-avatar">JW</div>
+                  <div class="board-avatar-photo" style="background-image: url('data/jeffreywu.png')" role="img" aria-label="Jeffrey Wu"></div>
                   <div>
                     <p class="board-name">Jeffrey Wu</p>
                     <p class="board-role">Head of Board</p>
@@ -117,11 +117,66 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="chapter-card" id="chapter-american">
+          <div class="chapter-top">
+            <div class="chapter-top-inner">
+              <h2 class="chapter-name-heading">
+                <button type="button" class="chapter-name-toggle" id="chapter-american-toggle" aria-expanded="false" aria-controls="chapter-american-body">
+                  <span class="chapter-name">American High School</span>
+                  <span class="chapter-badge">Active</span>
+                  <span class="chapter-name-chevron" aria-hidden="true">▾</span>
+                </button>
+              </h2>
+              <div class="chapter-photo-frame">
+                <img class="chapter-photo" src="data/american-high.jpg" alt="American High School campus" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="chapter-sections" id="chapter-american-body" hidden>
             <div class="chapter-section">
-              <h3>Past Events</h3>
-              <div class="empty-state">
-                <div class="empty-icon">📋</div>
-                <p>No past events yet. Stay tuned!</p>
+              <h3>Chapter Board</h3>
+              <div class="chapter-board">
+                <div class="board-member">
+                  <div class="board-avatar-photo" style="background-image: url('data/nathanzhang.png')" role="img" aria-label="Nathan Zhang"></div>
+                  <div>
+                    <p class="board-name">Nathan Zhang</p>
+                    <p class="board-role">Head of Board</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter-card" id="chapter-mission">
+          <div class="chapter-top">
+            <div class="chapter-top-inner">
+              <h2 class="chapter-name-heading">
+                <button type="button" class="chapter-name-toggle" id="chapter-mission-toggle" aria-expanded="false" aria-controls="chapter-mission-body">
+                  <span class="chapter-name">Mission San Jose High School</span>
+                  <span class="chapter-badge">Active</span>
+                  <span class="chapter-name-chevron" aria-hidden="true">▾</span>
+                </button>
+              </h2>
+              <div class="chapter-photo-frame">
+                <img class="chapter-photo" src="data/mission-san-jose.jpg" alt="Mission San Jose High School campus" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="chapter-sections" id="chapter-mission-body" hidden>
+            <div class="chapter-section">
+              <h3>Chapter Board</h3>
+              <div class="chapter-board">
+                <div class="board-member">
+                  <div class="board-avatar-photo" style="background-image: url('data/minluzhao.png')" role="img" aria-label="Minlu Zhao"></div>
+                  <div>
+                    <p class="board-name">Minlu Zhao</p>
+                    <p class="board-role">Head of Board</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -133,7 +188,7 @@
   <footer id="main-footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <span class="nav-logo">SV<span class="logo-accent">stem</span></span>
+        <span class="nav-logo"><img src="data/logo-footer.png" alt="Silicon Valley STEM"></span>
         <p>STEM Education for Everyone.</p>
       </div>
       <div class="footer-links">
