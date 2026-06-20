@@ -167,15 +167,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (next) next.addEventListener('click', () => go(index + 1));
   });
 
-  // --- Mobile Dropdown Toggle ---
-  const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
-  dropdownTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      // On mobile, toggle the dropdown instead of navigating
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        trigger.closest('.nav-dropdown').classList.toggle('open');
-      }
-    });
-  });
 });

@@ -947,67 +947,6 @@ img {
   padding-top: 48px;
 }
 
-/* --- Nav Dropdown --- */
-.nav-dropdown {
-  position: relative;
-}
-
-.dropdown-trigger {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.dropdown-arrow {
-  font-size: 0.75rem;
-  transition: transform 0.2s ease;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  min-width: 240px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-md);
-  list-style: none;
-  padding: 8px 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-50%, 4px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-  z-index: 200;
-}
-
-.nav-dropdown:hover .dropdown-menu,
-.nav-dropdown.open .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(-50%, 0);
-}
-
-.nav-dropdown:hover .dropdown-arrow {
-  transform: rotate(180deg);
-}
-
-.dropdown-menu li a {
-  display: block;
-  padding: 10px 20px;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  transition: color var(--transition), background var(--transition);
-  white-space: nowrap;
-}
-
-.dropdown-menu li a:hover,
-.dropdown-menu li a.active {
-  color: var(--color-accent);
-  background: var(--color-accent-bg);
-}
-
 /* --- Event Detail Page --- */
 .back-link {
   display: inline-block;
@@ -1374,24 +1313,6 @@ img {
 
   .team-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    border: none;
-    padding: 0 0 0 16px;
-    opacity: 0;
-    visibility: hidden;
-    max-height: 0;
-    transform: none;
-    transition: opacity 0.2s ease, max-height 0.3s ease, visibility 0.2s ease;
-  }
-
-  .nav-dropdown.open .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    max-height: 200px;
   }
 
   .event-detail-meta {
