@@ -7,7 +7,9 @@
       "Bash(python -c \"import pillow_heif; from PIL import Image; print\\('heif ok'\\)\")",
       "Bash(pip install:*)",
       "Bash(python -c ':*)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(rm -f _irv_src.png)"
     ]
   }
 }

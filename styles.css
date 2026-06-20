@@ -401,6 +401,26 @@ img {
   background-attachment: fixed;
 }
 
+/* Our Team — CRYP group photo banner */
+#team-header {
+  padding: calc(var(--nav-height) + 200px) 0 200px;
+  background-image: url('data/cryp4.jpg');
+  background-size: cover;
+  background-position: center 40%;
+}
+
+/* Events — Scratch workshop banner (darker photo → stronger overlay) */
+#events-header {
+  padding: calc(var(--nav-height) + 200px) 0 200px;
+  background-image: url('data/scratchworkshop1.jpeg');
+  background-size: cover;
+  background-position: center 45%;
+}
+
+#events-header::before {
+  background: rgba(250, 250, 250, 0.62);
+}
+
 /* Chapters — two school photos side by side at full natural height */
 #chapters-header {
   /* 16.65vw = natural image height when each of 4 photos is 25vw wide (aspect 650×433) */
@@ -877,10 +897,6 @@ img {
   color: #d1d1e0;
 }
 
-/* Events page — compact calendar (leave room for list below) */
-#events-header.page-header {
-  padding-bottom: 0;
-}
 
 #events-calendar.section {
   padding: 16px 0 32px;
@@ -990,95 +1006,6 @@ img {
 .dropdown-menu li a.active {
   color: var(--color-accent);
   background: var(--color-accent-bg);
-}
-
-/* --- Events Listing Cards --- */
-.events-list {
-  display: grid;
-  gap: 16px;
-}
-
-.event-card {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  padding: 24px 28px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  text-decoration: none;
-  transition: box-shadow var(--transition), transform var(--transition);
-}
-
-.event-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
-.event-card-date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 56px;
-  padding: 12px 8px;
-  background: var(--color-accent-bg);
-  border-radius: var(--radius-sm);
-  flex-shrink: 0;
-}
-
-.event-card-month {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--color-accent);
-}
-
-.event-card-day {
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--color-text);
-}
-
-.event-card-year {
-  font-size: 0.7rem;
-  color: var(--color-text-secondary);
-}
-
-.event-card-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.event-card-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--color-text);
-}
-
-.event-card-desc {
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.event-card-arrow {
-  font-size: 1.2rem;
-  color: var(--color-text-secondary);
-  flex-shrink: 0;
-  transition: transform var(--transition), color var(--transition);
-}
-
-.event-card:hover .event-card-arrow {
-  transform: translateX(4px);
-  color: var(--color-accent);
 }
 
 /* --- Event Detail Page --- */
@@ -1472,16 +1399,6 @@ img {
     align-items: flex-start;
   }
 
-  .event-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  .event-card-arrow {
-    display: none;
-  }
-
   .lead-grid {
     grid-template-columns: 1fr;
   }
@@ -1504,4 +1421,154 @@ img {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* --- Events list --- */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.event-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+
+.event-head {
+  display: block;
+}
+
+.event-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.event-date-badge {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--color-accent-bg);
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.event-location {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.event-location::before {
+  content: '📍 ';
+}
+
+.event-desc {
+  margin-top: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* --- Event photo slideshow --- */
+.event-slideshow {
+  margin-top: 18px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #0f0f1a;
+}
+
+.slide-viewport {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.slide {
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-text);
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition);
+}
+
+.slide-arrow:hover {
+  background: #fff;
+}
+
+.slide-prev { left: 12px; }
+.slide-next { right: 12px; }
+
+.slide-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.slide-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.slide-dot.active {
+  background: #fff;
+}
+
+.event-photos-empty {
+  margin-top: 18px;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .slide-viewport { height: 260px; }
 }

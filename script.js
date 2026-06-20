@@ -130,6 +130,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- Event photo slideshows ---
+  document.querySelectorAll('[data-slideshow]').forEach(root => {
+    const track = root.querySelector('.slide-track');
+    const slides = Array.from(root.querySelectorAll('.slide'));
+    const prev = root.querySelector('.slide-prev');
+    const next = root.querySelector('.slide-next');
+    const dotsWrap = root.querySelector('.slide-dots');
+    if (!track || slides.length === 0) return;
+
+    // Single image: no controls needed
+    if (slides.length <= 1) {
+      if (prev) prev.style.display = 'none';
+      if (next) next.style.display = 'none';
+      return;
+    }
+
+    let index = 0;
+    const dots = slides.map((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'slide-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+      dot.addEventListener('click', () => go(i));
+      if (dotsWrap) dotsWrap.appendChild(dot);
+      return dot;
+    });
+
+    function go(n) {
+      index = (n + slides.length) % slides.length;
+      track.style.transform = `translateX(${-index * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+
+    if (prev) prev.addEventListener('click', () => go(index - 1));
+    if (next) next.addEventListener('click', () => go(index + 1));
+  });
+
   // --- Mobile Dropdown Toggle ---
   const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
   dropdownTriggers.forEach(trigger => {
