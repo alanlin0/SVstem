@@ -914,6 +914,10 @@ img {
   text-align: center;
 }
 
+#events-listing .events-past-title {
+  margin-top: 64px;
+}
+
 #events-calendar .calendar-wrapper {
   max-width: 380px;
   margin: 0 auto;
